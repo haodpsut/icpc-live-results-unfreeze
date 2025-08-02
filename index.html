@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICPC Live Results Unfreeze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'contest-dark': '#1a202c',
+              'contest-dark-light': '#2d3748',
+              'contest-gray': '#4a5568',
+              'contest-light-gray': '#a0aec0',
+              'contest-gold': '#ffd700',
+              'contest-silver': '#c0c0c0',
+              'contest-bronze': '#cd7f32',
+              'contest-ac': '#28a745',
+              'contest-wa': '#dc3545',
+              'contest-tle': '#17a2b8',
+              'contest-pending': '#ffc107',
+            },
+            fontFamily: {
+              'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              pop: {
+                '0%': { transform: 'scale(0.5)', opacity: '0' },
+                '80%': { transform: 'scale(1.1)', opacity: '1' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              slideUp: {
+                 '0%': { transform: 'translateY(100%)', opacity: '0' },
+                 '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              flashAc: {
+                '50%': { backgroundColor: '#68d391', transform: 'scale(1.1)', boxShadow: '0 0 15px #68d391' },
+              },
+              flashWa: {
+                '50%': { backgroundColor: '#fc8181', transform: 'scale(1.1)', boxShadow: '0 0 15px #fc8181' },
+              },
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+              pop: 'pop 0.3s ease-out forwards',
+              slideUp: 'slideUp 0.5s ease-out forwards',
+              flashAc: 'flashAc 1.2s ease-in-out',
+              flashWa: 'flashWa 1.2s ease-in-out',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-contest-dark text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "ICPC Live Results Unfreeze",
+  "description": "A web application to simulate the dramatic reveal of final standings for an ICPC-style programming contest. Paste your contest data and watch the submissions get judged one by one, updating the scoreboard in real-time.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
